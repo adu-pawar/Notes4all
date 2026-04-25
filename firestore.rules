@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Notes collection
+    match /notes/{noteId} {
+      // Anyone can read published notes
+      allow read: if true;
+      // Authenticated users can create notes (status must be "pending")
+      allow create: if request.auth != null
+                    && request.resource.data.status == "pending";
+      // Only admins can update/delete
+      allow update, delete: if request.auth != null
+                            && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "admin";
+    }
+  }
+}
