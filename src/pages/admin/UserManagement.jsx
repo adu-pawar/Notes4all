@@ -101,39 +101,39 @@ function UserManagement() {
   );
 
   return (
-    <div className="space-y-8 animate-in fade-in duration-500">
+    <div className="animate-in fade-in duration-500 usermanagement-div-1">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="usermanagement-div-2">
         <div>
-          <h1 className="text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic">
-            User <span className="text-indigo-600">Management</span>
+          <h1 className="usermanagement-h1-3">
+            User <span className="usermanagement-span-4">Management</span>
           </h1>
-          <p className="text-gray-500 mt-1 text-sm font-medium uppercase tracking-widest">
+          <p className="usermanagement-p-5">
             {users.length} registered users
           </p>
         </div>
         <button 
           onClick={fetchUsers}
-          className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-gray-50 dark:hover:bg-slate-800 transition shadow-sm"
+          className="usermanagement-button-6"
         >
           <FiRefreshCw className={loading ? 'animate-spin' : ''} /> Refresh
         </button>
       </div>
 
       {/* Search Bar & Filters */}
-      <div className="space-y-4">
-        <div className="relative group">
-          <FiSearch className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-indigo-600 transition-colors" size={20} />
+      <div className="usermanagement-div-7">
+        <div className="group usermanagement-div-8">
+          <FiSearch className="usermanagement-fisearch-9" size={20} />
           <input 
             type="text"
             placeholder="Search by name or email..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-16 pr-8 py-5 bg-white dark:bg-slate-900 border-none rounded-[28px] focus:ring-4 focus:ring-indigo-500/10 text-gray-900 dark:text-white font-bold shadow-xl shadow-indigo-100/20 dark:shadow-none placeholder:text-gray-400"
+            className="usermanagement-div-10"
           />
         </div>
         
-        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+        <div className="scrollbar-hide usermanagement-div-11">
           {['all', 'student', 'subadmin', 'admin'].map(role => (
             <button
               key={role}
@@ -151,58 +151,58 @@ function UserManagement() {
       </div>
 
       {/* Users Table */}
-      <div className="bg-white dark:bg-slate-900 rounded-[32px] border border-gray-100 dark:border-slate-800 overflow-hidden shadow-2xl">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left">
+      <div className="usermanagement-div-12">
+        <div className="usermanagement-div-13">
+          <table className="usermanagement-table-14">
             <thead>
-              <tr className="bg-gray-50 dark:bg-slate-800/50">
-                <th className="px-8 py-6 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">User</th>
-                <th className="px-8 py-6 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">Contact</th>
-                <th className="px-8 py-6 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">Role & Status</th>
-                <th className="px-8 py-6 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 text-right">Actions</th>
+              <tr className="usermanagement-tr-15">
+                <th className="usermanagement-th-16">User</th>
+                <th className="usermanagement-th-17">Contact</th>
+                <th className="usermanagement-th-18">Role & Status</th>
+                <th className="usermanagement-th-19">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-50 dark:divide-slate-800">
+            <tbody className="usermanagement-tbody-20">
               {loading ? (
                 <tr>
-                  <td colSpan="4" className="px-8 py-20 text-center">
-                    <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-600 mx-auto"></div>
+                  <td colSpan="4" className="usermanagement-td-21">
+                    <div className="animate-spin usermanagement-div-22"></div>
                   </td>
                 </tr>
               ) : filteredUsers.length === 0 ? (
                 <tr>
-                  <td colSpan="4" className="px-8 py-20 text-center text-gray-400 font-bold uppercase tracking-widest text-sm">
+                  <td colSpan="4" className="usermanagement-td-23">
                     No users found
                   </td>
                 </tr>
               ) : (
                 filteredUsers.map((user) => (
-                  <tr key={user.id} className="hover:bg-gray-50/50 dark:hover:bg-slate-800/30 transition-colors">
-                    <td className="px-8 py-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center text-indigo-600 shrink-0">
+                  <tr key={user.id} className="usermanagement-tr-24">
+                    <td className="usermanagement-td-25">
+                      <div className="usermanagement-div-26">
+                        <div className="usermanagement-div-27">
                           <FiUser size={20} />
                         </div>
                         <div>
-                          <div className="font-black text-gray-900 dark:text-white uppercase tracking-tight">{user.name || 'Student'}</div>
-                          <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase">ID: {user.id.slice(0, 8)}...</div>
+                          <div className="usermanagement-div-28">{user.name || 'Student'}</div>
+                          <div className="usermanagement-div-29">ID: {user.id.slice(0, 8)}...</div>
                         </div>
                       </div>
                     </td>
-                    <td className="px-8 py-6">
-                      <div className="flex flex-col">
-                        <span className="flex items-center gap-1.5 text-xs font-bold text-gray-600 dark:text-gray-300">
-                          <FiMail size={12} className="text-gray-400" /> {user.email}
+                    <td className="usermanagement-td-30">
+                      <div className="usermanagement-div-31">
+                        <span className="usermanagement-span-32">
+                          <FiMail size={12} className="usermanagement-fimail-33" /> {user.email}
                         </span>
                       </div>
                     </td>
-                    <td className="px-8 py-6">
-                      <div className="flex items-center gap-3">
+                    <td className="usermanagement-td-34">
+                      <div className="usermanagement-div-35">
                         <select 
                           value={user.role}
                           onChange={(e) => handleRoleChange(user, e.target.value)}
                           disabled={actionLoading === user.id + '_role'}
-                          className="pl-3 pr-8 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 rounded-full text-[10px] font-black uppercase tracking-widest border-none focus:ring-0 cursor-pointer appearance-none transition-all disabled:opacity-50"
+                          className="usermanagement-div-36"
                         >
                           <option value="student">STUDENT</option>
                           <option value="subadmin">SUBADMIN</option>
@@ -217,12 +217,12 @@ function UserManagement() {
                         </span>
                       </div>
                     </td>
-                    <td className="px-8 py-6">
-                      <div className="flex items-center justify-end gap-2">
+                    <td className="usermanagement-td-37">
+                      <div className="usermanagement-div-38">
                         <button 
                           onClick={() => handleResetPassword(user)}
                           disabled={actionLoading === user.id + '_reset'}
-                          className="p-3 bg-gray-50 dark:bg-slate-800 text-gray-600 dark:text-gray-300 rounded-2xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-600 transition disabled:opacity-50"
+                          className="usermanagement-div-39"
                           title="Reset Password"
                         >
                           <FiKey size={18} />

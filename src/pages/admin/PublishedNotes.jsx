@@ -160,46 +160,46 @@ function PublishedNotes() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+      <div className="publishednotes-div-1">
+        <div className="animate-spin publishednotes-div-2"></div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
+    <div className="publishednotes-div-3">
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div className="publishednotes-div-4">
         <div>
-          <h1 className="text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic">
-            Published <span className="text-indigo-600">Notes</span>
+          <h1 className="publishednotes-h1-5">
+            Published <span className="publishednotes-span-6">Notes</span>
           </h1>
-          <p className="text-gray-500 mt-1 text-sm font-medium">
+          <p className="publishednotes-p-7">
             {notes.length} notes across {sortedSubjects.length} subject{sortedSubjects.length !== 1 ? 's' : ''}
           </p>
         </div>
         {/* Search */}
-        <div className="relative w-full md:w-80">
-          <FiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+        <div className="publishednotes-div-8">
+          <FiSearch className="publishednotes-fisearch-9" />
           <input
             type="text"
             placeholder="Search notes or subjects..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl text-sm font-medium focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+            className="publishednotes-div-10"
           />
         </div>
       </div>
 
       {/* Subject Groups */}
       {sortedSubjects.length === 0 ? (
-        <div className="bg-white dark:bg-slate-900 rounded-[32px] border border-gray-100 dark:border-slate-800 p-16 text-center">
-          <div className="w-20 h-20 bg-gray-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">📭</div>
-          <h3 className="text-xl font-black text-gray-800 dark:text-white uppercase">No Notes Found</h3>
-          <p className="text-gray-400 mt-2 text-sm">{searchTerm ? 'Try a different search term.' : 'No published notes yet.'}</p>
+        <div className="publishednotes-div-11">
+          <div className="publishednotes-div-12">📭</div>
+          <h3 className="publishednotes-h3-13">No Notes Found</h3>
+          <p className="publishednotes-p-14">{searchTerm ? 'Try a different search term.' : 'No published notes yet.'}</p>
         </div>
       ) : (
-        <div className="space-y-5">
+        <div className="publishednotes-div-15">
           {sortedSubjects.map((subject) => {
             const subjectNotes = groupedNotes[subject];
             const isExpanded = expandedSubjects[subject];
@@ -207,33 +207,33 @@ function PublishedNotes() {
             return (
               <div
                 key={subject}
-                className="bg-white dark:bg-slate-900 rounded-[28px] border border-gray-100 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                className="publishednotes-div-16"
               >
                 {/* Subject Header */}
                 <div
-                  className="flex items-center justify-between px-7 py-5 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-slate-800/30 transition"
+                  className="publishednotes-div-17"
                   onClick={() => toggleSubject(subject)}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-indigo-50 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600 shrink-0">
+                  <div className="publishednotes-div-18">
+                    <div className="publishednotes-div-19">
                       {isExpanded ? <FiChevronDown size={20} /> : <FiChevronRight size={20} />}
                     </div>
                     <div>
-                      <h3 className="text-lg font-black text-gray-900 dark:text-white uppercase tracking-tight">{subject}</h3>
-                      <p className="text-xs text-gray-400 font-medium">{subjectNotes.length} note{subjectNotes.length !== 1 ? 's' : ''}</p>
+                      <h3 className="publishednotes-h3-20">{subject}</h3>
+                      <p className="publishednotes-p-21">{subjectNotes.length} note{subjectNotes.length !== 1 ? 's' : ''}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="publishednotes-div-22">
                     <button
                       onClick={(e) => { e.stopPropagation(); handleRenameSubject(subject); }}
-                      className="flex items-center gap-1.5 px-4 py-2 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 rounded-xl text-xs font-bold hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition"
+                      className="publishednotes-div-23"
                       title={`Rename ${subject}`}
                     >
                       <FiEdit size={14} /> Rename
                     </button>
                     <button
                       onClick={(e) => { e.stopPropagation(); handleDeleteSubject(subject); }}
-                      className="flex items-center gap-1.5 px-4 py-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-xl text-xs font-bold hover:bg-red-100 dark:hover:bg-red-900/30 transition"
+                      className="publishednotes-div-24"
                       title={`Delete all notes in ${subject}`}
                     >
                       <FiFolderMinus size={14} /> Delete
@@ -243,42 +243,42 @@ function PublishedNotes() {
 
                 {/* Notes List (collapsible) */}
                 {isExpanded && (
-                  <div className="border-t border-gray-100 dark:border-slate-800 divide-y divide-gray-50 dark:divide-slate-800">
+                  <div className="publishednotes-div-25">
                     {subjectNotes.map((note) => (
                       <div
                         key={note.id}
-                        className="flex flex-col sm:flex-row sm:items-center justify-between px-7 py-4 hover:bg-indigo-50/20 dark:hover:bg-slate-800/30 transition gap-3"
+                        className="publishednotes-div-26"
                       >
                         {/* Note info */}
-                        <div className="flex items-center gap-4 min-w-0 flex-1">
-                          <div className="w-9 h-9 bg-gray-50 dark:bg-slate-800 rounded-xl flex items-center justify-center text-gray-400 shrink-0">
+                        <div className="publishednotes-div-27">
+                          <div className="publishednotes-div-28">
                             <FiFileText size={16} />
                           </div>
-                          <div className="min-w-0">
-                            <p className="font-bold text-gray-800 dark:text-white text-sm truncate">{note.title}</p>
-                            <p className="text-xs text-gray-400 mt-0.5">
+                          <div className="publishednotes-div-29">
+                            <p className="publishednotes-p-30">{note.title}</p>
+                            <p className="publishednotes-p-31">
                               {note.uploaderName || 'Student'} &bull; {formatDate(note.uploadedAt)} {formatSize(note.fileSize) && `• ${formatSize(note.fileSize)}`}
                             </p>
                           </div>
                         </div>
 
                         {/* Actions */}
-                        <div className="flex items-center gap-2 shrink-0">
+                        <div className="publishednotes-div-32">
                           <button
                             onClick={() => handleViewPdf(note)}
-                            className="flex items-center gap-1 px-3 py-2 bg-gray-50 dark:bg-slate-800 text-gray-600 dark:text-gray-300 rounded-lg text-xs font-bold hover:bg-gray-100 dark:hover:bg-slate-700 transition"
+                            className="publishednotes-div-33"
                           >
                             <FiExternalLink size={13} /> View
                           </button>
                           <button
                             onClick={() => openEditModal(note)}
-                            className="flex items-center gap-1 px-3 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 rounded-lg text-xs font-bold hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition"
+                            className="publishednotes-div-34"
                           >
                             <FiEdit3 size={13} /> Edit
                           </button>
                           <button
                             onClick={() => handleDelete(note)}
-                            className="flex items-center gap-1 px-3 py-2 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-lg text-xs font-bold hover:bg-red-100 dark:hover:bg-red-900/30 transition"
+                            className="publishednotes-div-35"
                           >
                             <FiTrash2 size={13} /> Delete
                           </button>
@@ -295,51 +295,51 @@ function PublishedNotes() {
 
       {/* Edit Modal */}
       {editingNote && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-slate-900 rounded-[32px] p-8 w-full max-w-lg shadow-2xl border border-gray-100 dark:border-slate-800">
-            <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white uppercase italic tracking-tight">
-                Edit <span className="text-indigo-600">Note</span>
+        <div className="publishednotes-div-36">
+          <div className="publishednotes-div-37">
+            <div className="publishednotes-div-38">
+              <h3 className="publishednotes-h3-39">
+                Edit <span className="publishednotes-span-40">Note</span>
               </h3>
               <button
                 onClick={() => setEditingNote(null)}
-                className="w-10 h-10 bg-gray-100 dark:bg-slate-800 rounded-xl flex items-center justify-center text-gray-500 hover:bg-red-50 hover:text-red-500 transition"
+                className="publishednotes-div-41"
               >
                 <FiX size={18} />
               </button>
             </div>
 
-            <div className="space-y-5">
+            <div className="publishednotes-div-42">
               <div>
-                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2 ml-1">Title</label>
+                <label className="publishednotes-label-43">Title</label>
                 <input
                   type="text"
                   value={editForm.title}
                   onChange={(e) => setEditForm({ ...editForm, title: e.target.value })}
-                  className="w-full px-5 py-4 bg-gray-50 dark:bg-slate-800 border-none rounded-2xl text-gray-900 dark:text-white font-bold focus:ring-2 focus:ring-indigo-500 transition-all"
+                  className="publishednotes-div-44"
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2 ml-1">Subject</label>
+                <label className="publishednotes-label-45">Subject</label>
                 <input
                   type="text"
                   value={editForm.subject}
                   onChange={(e) => setEditForm({ ...editForm, subject: e.target.value })}
-                  className="w-full px-5 py-4 bg-gray-50 dark:bg-slate-800 border-none rounded-2xl text-gray-900 dark:text-white font-bold focus:ring-2 focus:ring-indigo-500 transition-all"
+                  className="publishednotes-div-46"
                 />
               </div>
             </div>
 
-            <div className="flex gap-3 mt-8">
+            <div className="publishednotes-div-47">
               <button
                 onClick={() => setEditingNote(null)}
-                className="flex-1 py-4 bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-300 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-gray-200 transition"
+                className="publishednotes-div-48"
               >
                 Cancel
               </button>
               <button
                 onClick={handleSaveEdit}
-                className="flex-1 flex items-center justify-center gap-2 py-4 bg-indigo-600 text-white rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-indigo-700 shadow-xl shadow-indigo-200 dark:shadow-none transition"
+                className="publishednotes-button-49"
               >
                 <FiSave size={16} /> Save Changes
               </button>

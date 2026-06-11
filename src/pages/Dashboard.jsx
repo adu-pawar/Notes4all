@@ -37,6 +37,9 @@ function Dashboard() {
       } finally {
         setLoading(false);
       }
+    }, (error) => {
+      console.error("Dashboard database read error:", error);
+      setLoading(false);
     });
 
     return () => unsubscribe();
@@ -44,60 +47,60 @@ function Dashboard() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-96">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+      <div className="dashboard-div-1">
+        <div className="animate-spin dashboard-div-2"></div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto mt-4 md:mt-8 px-4 pb-20 animate-in fade-in duration-700">
+    <div className="animate-in fade-in dashboard-div-3">
       {/* Profile Header */}
-      <div className="glass bg-white dark:bg-slate-900 p-6 md:p-12 rounded-[32px] md:rounded-[40px] shadow-2xl border border-gray-100 dark:border-slate-800 flex flex-col lg:flex-row items-center justify-between gap-8">
-        <div className="flex flex-col md:flex-row items-center text-center md:text-left md:space-x-6 gap-4 md:gap-0">
-          <div className="bg-indigo-600 w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg shadow-indigo-100 dark:shadow-none">
-            <FiUser size={30} className="text-white" />
+      <div className="glass dashboard-div-4">
+        <div className="dashboard-div-5">
+          <div className="dashboard-div-6">
+            <FiUser size={30} className="dashboard-fiuser-7" />
           </div>
           <div>
-            <h2 className="text-2xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic leading-tight">
-              Hello, <span className="text-indigo-600">{userData?.name || currentUser?.email?.split('@')[0]}</span>
+            <h2 className="dashboard-h2-8">
+              Hello, <span className="dashboard-span-9">{userData?.name || currentUser?.email?.split('@')[0]}</span>
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 font-bold uppercase tracking-widest text-[10px] md:text-xs mt-1">Student Dashboard • My Analytics</p>
+            <p className="dashboard-p-10">Student Dashboard • My Analytics</p>
           </div>
         </div>
         
-        <div className="flex items-center justify-center w-full md:w-auto">
-          <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
-            <div className="bg-gray-50 dark:bg-slate-800/50 px-6 py-4 md:px-10 md:py-6 rounded-2xl md:rounded-3xl text-center border border-gray-100 dark:border-slate-800">
-              <span className="block text-xl md:text-3xl font-black text-gray-900 dark:text-white">{userNotes.length}</span>
-              <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-indigo-600">Uploads</span>
+        <div className="dashboard-div-11">
+          <div className="dashboard-div-12">
+            <div className="dashboard-div-13">
+              <span className="dashboard-span-14">{userNotes.length}</span>
+              <span className="dashboard-span-15">Uploads</span>
             </div>
-            <div className="bg-indigo-600 px-6 py-4 md:px-10 md:py-6 rounded-2xl md:rounded-3xl text-center shadow-xl shadow-indigo-100 dark:shadow-none">
-              <span className="block text-xl md:text-3xl font-black text-white">{stats.likes}</span>
-              <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-indigo-100 opacity-80">Total Likes</span>
+            <div className="dashboard-div-16">
+              <span className="dashboard-span-17">{stats.likes}</span>
+              <span className="dashboard-span-18">Total Likes</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-8 md:mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
+      <div className="dashboard-div-19">
         {/* Main Content: My Uploads */}
-        <div className="lg:col-span-2 space-y-6">
-          <div className="flex items-center space-x-3 mb-2 px-2">
-            <FiFileText className="text-indigo-600" size={20} md:size={24} />
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white uppercase italic">My Published <span className="text-indigo-600">Notes</span></h3>
+        <div className="dashboard-div-20">
+          <div className="dashboard-div-21">
+            <FiFileText className="dashboard-fifiletext-22" size={20} md:size={24} />
+            <h3 className="dashboard-h3-23">My Published <span className="dashboard-span-24">Notes</span></h3>
           </div>
           
-          <div className="space-y-4">
+          <div className="dashboard-div-25">
             {userNotes.length === 0 ? (
-              <div className="p-12 md:p-20 text-center glass bg-gray-50/50 dark:bg-slate-900/50 rounded-[32px] md:rounded-[40px] border border-dashed border-gray-200 dark:border-slate-800">
-                <p className="text-gray-400 font-bold uppercase tracking-widest text-xs md:text-sm">No uploads found yet.</p>
+              <div className="glass dashboard-div-26">
+                <p className="dashboard-p-27">No uploads found yet.</p>
               </div>
             ) : (
               userNotes.map(note => (
-                <div key={note.id} className="group flex flex-col gap-3">
-                  <div className="glass bg-white dark:bg-slate-900 p-4 md:p-6 rounded-[24px] md:rounded-[32px] border border-gray-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
-                    <div className="flex items-center space-x-4 md:space-x-5 w-full sm:w-auto">
+                <div key={note.id} className="group dashboard-div-28">
+                  <div className="glass duration-300 dashboard-div-29">
+                    <div className="dashboard-div-30">
                       <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center transition duration-300 shrink-0 ${
                         note.status === 'rejected' 
                         ? 'bg-red-50 dark:bg-red-900/30 text-red-600' 
@@ -105,14 +108,14 @@ function Dashboard() {
                       }`}>
                         <FiFileText size={20} />
                       </div>
-                      <div className="min-w-0">
-                        <h4 className="font-black text-base md:text-lg text-gray-900 dark:text-white truncate max-w-[180px] xs:max-w-xs md:max-w-md">{note.title}</h4>
-                        <div className="flex items-center space-x-3 md:space-x-4 mt-1 text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                          <span className="flex items-center whitespace-nowrap"><FiHeart className="mr-1" /> {note.likes || 0}</span>
+                      <div className="dashboard-div-31">
+                        <h4 className="xs:max-w-xs dashboard-h4-32">{note.title}</h4>
+                        <div className="dashboard-div-33">
+                          <span className="dashboard-span-34"><FiHeart className="dashboard-fiheart-35" /> {note.likes || 0}</span>
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center w-full sm:w-auto justify-end">
+                    <div className="dashboard-div-36">
                       <span className={`px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-widest border transition-all ${
                         note.status === 'published' 
                           ? 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 border-green-100 dark:border-green-800' 
@@ -127,11 +130,11 @@ function Dashboard() {
                   
                   {/* Rejection Reason display */}
                   {note.status === 'rejected' && note.rejectionReason && (
-                    <div className="mx-4 md:mx-6 p-4 md:p-5 bg-red-50/50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-2xl md:rounded-[24px] flex items-start gap-3 animate-in slide-in-from-top-2 duration-300">
-                      <FiAlertCircle className="text-red-600 shrink-0 mt-0.5" size={16} />
+                    <div className="animate-in slide-in-from-top-2 duration-300 dashboard-div-37">
+                      <FiAlertCircle className="dashboard-fialertcircle-38" size={16} />
                       <div>
-                        <p className="text-[10px] font-black uppercase tracking-widest text-red-600 mb-1">Rejection Reason</p>
-                        <p className="text-xs md:text-sm font-medium text-red-800 dark:text-red-300 leading-relaxed italic">"{note.rejectionReason}"</p>
+                        <p className="dashboard-p-39">Rejection Reason</p>
+                        <p className="dashboard-p-40">"{note.rejectionReason}"</p>
                       </div>
                     </div>
                   )}
@@ -142,27 +145,27 @@ function Dashboard() {
         </div>
 
         {/* Sidebar: Recent Activity */}
-        <div className="space-y-6 md:space-y-8">
-          <div className="glass bg-indigo-600 p-6 md:p-8 rounded-[32px] md:rounded-[40px] text-white shadow-xl shadow-indigo-100 dark:shadow-none">
-            <h4 className="text-xl md:text-2xl font-black uppercase italic mb-2">Pro Tip</h4>
-            <p className="text-indigo-100 font-medium text-xs md:text-sm leading-relaxed">Highly rated notes get featured on the main explorer and earn you 2x credibility points.</p>
-            <div className="mt-4 flex justify-end">
-              <span className="text-3xl md:text-4xl">⭐</span>
+        <div className="dashboard-div-41">
+          <div className="glass dashboard-div-42">
+            <h4 className="dashboard-h4-43">Pro Tip</h4>
+            <p className="dashboard-p-44">Highly rated notes get featured on the main explorer and earn you 2x credibility points.</p>
+            <div className="dashboard-div-45">
+              <span className="dashboard-span-46">⭐</span>
             </div>
           </div>
 
-          <div className="glass bg-white dark:bg-slate-900 p-6 md:p-8 rounded-[32px] md:rounded-[40px] border border-gray-100 dark:border-slate-800">
-            <h4 className="text-base md:text-lg font-black uppercase tracking-widest text-gray-900 dark:text-white mb-6 flex items-center">
-              <FiClock className="mr-2 text-indigo-600" /> Recent Updates
+          <div className="glass dashboard-div-47">
+            <h4 className="dashboard-h4-48">
+              <FiClock className="dashboard-ficlock-49" /> Recent Updates
             </h4>
-            <div className="space-y-5 md:space-y-6">
-              <div className="flex items-start space-x-3 border-l-2 border-indigo-100 dark:border-slate-800 pl-4">
-                <FiCheckCircle className="text-green-500 shrink-0 mt-1" />
-                <p className="text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-tight leading-relaxed">New guidelines for 2026 published by the Admin.</p>
+            <div className="dashboard-div-50">
+              <div className="dashboard-div-51">
+                <FiCheckCircle className="dashboard-ficheckcircle-52" />
+                <p className="dashboard-p-53">New guidelines for 2026 published by the Admin.</p>
               </div>
-              <div className="flex items-start space-x-3 border-l-2 border-indigo-100 dark:border-slate-800 pl-4">
-                <FiCheckCircle className="text-green-500 shrink-0 mt-1" />
-                <p className="text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-tight leading-relaxed">Backend migration completed successfully.</p>
+              <div className="dashboard-div-54">
+                <FiCheckCircle className="dashboard-ficheckcircle-55" />
+                <p className="dashboard-p-56">Backend migration completed successfully.</p>
               </div>
             </div>
           </div>

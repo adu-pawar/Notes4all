@@ -1,0 +1,151 @@
+.pdfviewer-div-1 {
+  @apply flex items-center justify-center min-h-screen bg-gray-50 dark:bg-slate-950;
+}
+
+.pdfviewer-div-2 {
+  @apply text-center p-8 rounded-3xl border border-gray-100 dark:border-slate-800 shadow-2xl bg-white dark:bg-slate-900;
+}
+
+.pdfviewer-p-3 {
+  @apply text-gray-500 dark:text-gray-400 text-lg font-black uppercase tracking-widest italic;
+}
+
+.pdfviewer-link-4 {
+  @apply mt-6 inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition shadow-xl shadow-indigo-200 dark:shadow-none;
+}
+
+.pdfviewer-div-5 {
+  @apply fixed inset-0 bg-gray-900 flex flex-col z-50 overflow-hidden;
+}
+
+.pdfviewer-div-6 {
+  @apply bg-gray-800/80 backdrop-blur-md px-4 md:px-6 py-3 flex items-center justify-between shrink-0 border-b border-gray-700;
+}
+
+.pdfviewer-div-7 {
+  @apply flex items-center gap-4;
+}
+
+.pdfviewer-div-8 {
+  @apply flex items-center gap-2 text-gray-300 hover:text-white text-sm font-bold transition;
+}
+
+.pdfviewer-span-9 {
+  @apply hidden sm:inline;
+}
+
+.pdfviewer-div-10 {
+  @apply h-4 w-[1px] bg-gray-600 hidden sm:block;
+}
+
+.pdfviewer-span-11 {
+  @apply text-white font-bold text-sm truncate max-w-[200px] md:max-w-md;
+}
+
+.pdfviewer-div-12 {
+  @apply flex items-center gap-1.5 px-3 py-1.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg text-xs font-bold transition border border-red-500/20;
+}
+
+.pdfviewer-div-13 {
+  @apply flex-1 relative bg-slate-950;
+}
+
+.pdfviewer-div-14 {
+  @apply absolute inset-0 flex items-center justify-center bg-slate-950 z-20;
+}
+
+.pdfviewer-div-15 {
+  @apply flex flex-col items-center gap-4;
+}
+
+.pdfviewer-div-16 {
+  @apply rounded-full h-12 w-12 border-b-2 border-indigo-500;
+}
+
+.pdfviewer-p-17 {
+  @apply text-gray-500 text-xs font-black uppercase tracking-[0.2em];
+}
+
+.pdfviewer-iframe-18 {
+  @apply w-full h-full border-none z-10 relative;
+}
+
+.pdfviewer-div-19 {
+  @apply absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-3 w-full max-w-sm px-4;
+}
+
+.pdfviewer-div-20 {
+  @apply bg-gray-900/80 backdrop-blur-xl border border-gray-700 p-4 rounded-[32px] shadow-2xl flex items-center justify-center gap-4 w-full;
+}
+
+.pdfviewer-div-21 {
+  @apply flex flex-col items-center text-center;
+}
+
+.pdfviewer-p-22 {
+  @apply text-[10px] font-black uppercase tracking-widest text-gray-500;
+}
+
+.pdfviewer-div-23 {
+  @apply fixed inset-0 z-[100] flex items-center justify-center p-4;
+}
+
+.pdfviewer-div-24 {
+  @apply absolute inset-0 bg-black/60 backdrop-blur-sm;
+}
+
+.pdfviewer-div-25 {
+  @apply relative bg-gray-900 border border-gray-700 rounded-[32px] shadow-2xl w-full max-w-md p-8;
+}
+
+.pdfviewer-div-26 {
+  @apply text-center py-8;
+}
+
+.pdfviewer-ficheckcircle-27 {
+  @apply text-green-500 w-16 h-16 mx-auto mb-4;
+}
+
+.pdfviewer-h3-28 {
+  @apply text-xl font-black text-white uppercase tracking-widest;
+}
+
+.pdfviewer-p-29 {
+  @apply text-gray-400 text-xs mt-2 font-bold uppercase tracking-widest;
+}
+
+.pdfviewer-div-30 {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.pdfviewer-div-31 {
+  @apply w-12 h-12 bg-red-500/10 text-red-500 rounded-2xl flex items-center justify-center shrink-0;
+}
+
+.pdfviewer-h3-32 {
+  @apply text-xl font-black text-white uppercase tracking-tight;
+}
+
+.pdfviewer-p-33 {
+  @apply text-gray-400 text-[10px] font-bold uppercase tracking-widest;
+}
+
+.pdfviewer-div-34 {
+  @apply ml-auto w-8 h-8 flex items-center justify-center text-gray-400 hover:bg-gray-800 rounded-full transition;
+}
+
+.pdfviewer-div-35 {
+  @apply space-y-4;
+}
+
+.pdfviewer-label-36 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2;
+}
+
+.pdfviewer-div-37 {
+  @apply w-full px-4 py-3 bg-gray-800 border-none rounded-2xl text-white focus:ring-2 focus:ring-red-500 resize-none font-medium;
+}
+
+.pdfviewer-button-38 {
+  @apply w-full py-4 bg-red-600 text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-red-700 transition disabled:opacity-50;
+}

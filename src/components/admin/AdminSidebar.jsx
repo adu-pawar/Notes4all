@@ -29,20 +29,20 @@ function AdminSidebar({ isSidebarOpen, setIsSidebarOpen }) {
 
   return (
     <div className={sidebarClasses}>
-      <div className="p-6 border-b border-slate-800 flex items-center justify-between">
-        <Link to="/admin" className="flex items-center space-x-2">
-          <span className="text-2xl">📚</span>
-          <span className="font-bold text-white text-xl tracking-tight uppercase tracking-widest leading-none">NOTES<span className="text-indigo-500">4ALL</span></span>
+      <div className="adminsidebar-div-1">
+        <Link to="/admin" className="adminsidebar-link-2">
+          <span className="adminsidebar-span-3">📚</span>
+          <span className="adminsidebar-span-4">NOTES<span className="adminsidebar-span-5">4ALL</span></span>
         </Link>
         <button 
           onClick={() => setIsSidebarOpen(false)}
-          className="lg:hidden text-gray-400 hover:text-white transition"
+          className="adminsidebar-div-6"
         >
           <FiX size={24} />
         </button>
       </div>
 
-      <nav className="flex-1 mt-6 px-4 space-y-2 overflow-y-auto">
+      <nav className="adminsidebar-nav-7">
         {links.map((link) => (
           <Link
             key={link.name}
@@ -54,19 +54,19 @@ function AdminSidebar({ isSidebarOpen, setIsSidebarOpen }) {
                 : 'text-slate-400 hover:bg-slate-800 hover:text-white'
             }`}
           >
-            <span className="text-xl">{link.icon}</span>
-            <span className="font-black uppercase tracking-widest text-[10px]">{link.name}</span>
+            <span className="adminsidebar-span-8">{link.icon}</span>
+            <span className="adminsidebar-span-9">{link.name}</span>
           </Link>
         ))}
       </nav>
 
-      <div className="p-6 border-t border-slate-800">
+      <div className="adminsidebar-div-10">
         <Link 
           to="/" 
-          className="flex items-center space-x-3 text-slate-400 hover:text-white transition group"
+          className="group adminsidebar-link-11"
         >
-          <span className="group-hover:-translate-x-1 transition-transform">🏠</span>
-          <span className="text-[10px] font-black uppercase tracking-widest">Back to Website</span>
+          <span className="adminsidebar-span-12">🏠</span>
+          <span className="adminsidebar-span-13">Back to Website</span>
         </Link>
       </div>
     </div>

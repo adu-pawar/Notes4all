@@ -1,0 +1,195 @@
+.home-div-1 {
+  @apply flex justify-center items-center h-96;
+}
+
+.home-div-2 {
+  @apply rounded-full h-12 w-12 border-b-2 border-indigo-600;
+}
+
+.home-div-3 {
+  @apply pb-20 px-4 space-y-12;
+}
+
+.home-div-4 {
+  @apply pt-8 text-center max-w-4xl mx-auto space-y-6;
+}
+
+.home-h1-5 {
+  @apply text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight;
+}
+
+.home-span-6 {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600;
+}
+
+.home-p-7 {
+  @apply text-lg text-gray-600 dark:text-gray-400 font-medium;
+}
+
+.home-div-8 {
+  @apply flex gap-4 mt-10 p-2 bg-white dark:bg-slate-900 rounded-3xl shadow-2xl shadow-indigo-100 dark:shadow-none border border-gray-100 dark:border-slate-800 max-w-2xl mx-auto;
+}
+
+.home-div-9 {
+  @apply flex-1 relative;
+}
+
+.home-fisearch-10 {
+  @apply absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 text-xl;
+}
+
+.home-div-11 {
+  @apply w-full pl-14 pr-6 py-5 rounded-2xl border-none focus:ring-0 text-gray-700 dark:text-gray-200 bg-transparent text-lg font-medium;
+}
+
+.home-div-12 {
+  @apply space-y-16;
+}
+
+.home-div-13 {
+  @apply space-y-6;
+}
+
+.home-div-14 {
+  @apply flex items-center justify-between border-b border-gray-100 dark:border-slate-800 pb-4;
+}
+
+.home-h3-15 {
+  @apply text-2xl font-black text-gray-800 dark:text-white uppercase tracking-wider flex items-center;
+}
+
+.home-span-16 {
+  @apply bg-indigo-600 w-2 h-8 rounded-full mr-4;
+}
+
+.home-span-17 {
+  @apply text-sm font-bold text-gray-400;
+}
+
+.home-div-18 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.home-div-19 {
+  @apply bg-white dark:bg-slate-900 rounded-3xl p-6 border border-gray-100 dark:border-slate-800 hover:border-indigo-500 dark:hover:border-indigo-500 transition-all shadow-sm hover:shadow-2xl hover:-translate-y-2 flex flex-col justify-between;
+}
+
+.home-div-20 {
+  @apply flex justify-between items-start mb-4;
+}
+
+.home-div-21 {
+  @apply w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition;
+}
+
+.home-h4-22 {
+  @apply text-xl font-bold text-gray-800 dark:text-white mb-2 line-clamp-2 leading-snug;
+}
+
+.home-p-23 {
+  @apply text-sm text-gray-500 font-medium mb-6 italic;
+}
+
+.home-span-24 {
+  @apply text-indigo-600 dark:text-indigo-400 font-bold;
+}
+
+.home-div-25 {
+  @apply flex items-center justify-between pt-6 border-t border-gray-50 dark:border-slate-800;
+}
+
+.home-div-26 {
+  @apply flex space-x-4 text-xs font-bold text-gray-400;
+}
+
+.home-div-27 {
+  @apply flex items-center transition-colors hover:text-red-500 text-gray-400;
+}
+
+.home-fiflag-28 {
+  @apply mr-1;
+}
+
+.home-div-29 {
+  @apply bg-gray-900 dark:bg-indigo-600 text-white px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-indigo-600 dark:hover:bg-indigo-700 transition shadow-lg shadow-indigo-100 dark:shadow-none;
+}
+
+.home-div-30 {
+  @apply text-center py-20 bg-gray-50 dark:bg-slate-900/50 rounded-[40px] border-2 border-dashed border-gray-200 dark:border-slate-800;
+}
+
+.home-div-31 {
+  @apply text-6xl mb-6 opacity-30;
+}
+
+.home-h3-32 {
+  @apply text-2xl font-bold text-gray-800 dark:text-white;
+}
+
+.home-p-33 {
+  @apply text-gray-500 max-w-xs mx-auto mt-2;
+}
+
+.home-div-34 {
+  @apply fixed inset-0 z-[100] flex items-center justify-center p-4;
+}
+
+.home-div-35 {
+  @apply absolute inset-0 bg-black/60 backdrop-blur-sm;
+}
+
+.home-div-36 {
+  @apply relative bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-[32px] shadow-2xl w-full max-w-md p-8;
+}
+
+.home-div-37 {
+  @apply text-center py-8;
+}
+
+.home-ficheckcircle-38 {
+  @apply text-green-500 w-16 h-16 mx-auto mb-4;
+}
+
+.home-h3-39 {
+  @apply text-xl font-black text-gray-900 dark:text-white uppercase tracking-widest;
+}
+
+.home-p-40 {
+  @apply text-gray-500 text-xs mt-2 font-bold uppercase tracking-widest;
+}
+
+.home-div-41 {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.home-div-42 {
+  @apply w-12 h-12 bg-red-50 dark:bg-red-900/20 text-red-500 rounded-2xl flex items-center justify-center shrink-0;
+}
+
+.home-h3-43 {
+  @apply text-xl font-black text-gray-900 dark:text-white uppercase tracking-tight;
+}
+
+.home-p-44 {
+  @apply text-gray-400 text-[10px] font-bold uppercase tracking-widest;
+}
+
+.home-div-45 {
+  @apply ml-auto w-8 h-8 flex items-center justify-center text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-full transition;
+}
+
+.home-div-46 {
+  @apply space-y-4;
+}
+
+.home-label-47 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2;
+}
+
+.home-div-48 {
+  @apply w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border-none rounded-2xl text-gray-900 dark:text-white focus:ring-2 focus:ring-red-500 resize-none font-medium;
+}
+
+.home-button-49 {
+  @apply w-full py-4 bg-red-600 text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-red-700 transition disabled:opacity-50;
+}

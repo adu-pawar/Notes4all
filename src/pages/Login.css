@@ -1,0 +1,103 @@
+.login-div-1 {
+  @apply fixed inset-0 flex items-center justify-center px-4 overflow-y-auto;
+}
+
+.login-div-2 {
+  @apply bg-white/70 dark:bg-slate-900/80 p-10 md:p-14 rounded-[40px] w-full max-w-md border border-white/40 dark:border-slate-800 shadow-2xl transition-all;
+}
+
+.login-div-3 {
+  @apply text-center mb-10;
+}
+
+.login-div-4 {
+  @apply bg-indigo-600 w-20 h-20 rounded-[30px] flex items-center justify-center mx-auto mb-6 shadow-xl shadow-indigo-200 dark:shadow-none;
+}
+
+.login-span-5 {
+  @apply text-4xl;
+}
+
+.login-h2-6 {
+  @apply text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic;
+}
+
+.login-span-7 {
+  @apply text-indigo-600;
+}
+
+.login-p-8 {
+  @apply text-gray-500 dark:text-gray-400 font-bold text-sm mt-2 uppercase tracking-widest;
+}
+
+.login-div-9 {
+  @apply bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 text-red-600 dark:text-red-400 px-6 py-4 rounded-3xl mb-8 flex items-center justify-center space-x-3 shadow-lg shadow-red-100 dark:shadow-none;
+}
+
+.login-div-10 {
+  @apply w-2 h-2 bg-red-500 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.5)];
+}
+
+.login-span-11 {
+  @apply text-[11px] font-black uppercase tracking-widest;
+}
+
+.login-form-12 {
+  @apply space-y-6;
+}
+
+.login-div-13 {
+  @apply space-y-2;
+}
+
+.login-label-14 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1;
+}
+
+.login-div-15 {
+  @apply relative;
+}
+
+.login-fimail-16 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.login-div-17 {
+  @apply w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all;
+}
+
+.login-div-18 {
+  @apply space-y-2;
+}
+
+.login-label-19 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1;
+}
+
+.login-div-20 {
+  @apply relative;
+}
+
+.login-filock-21 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.login-div-22 {
+  @apply w-full pl-12 pr-12 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all;
+}
+
+.login-div-23 {
+  @apply absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-indigo-600 focus:outline-none transition-colors;
+}
+
+.login-button-24 {
+  @apply w-full flex items-center justify-center space-x-2 py-5 px-4 rounded-[28px] bg-gray-900 dark:bg-indigo-600 text-white font-black uppercase tracking-[0.2em] shadow-2xl hover:bg-indigo-600 dark:hover:bg-indigo-700 transition disabled:opacity-50;
+}
+
+.login-p-25 {
+  @apply mt-10 text-center text-gray-500 dark:text-gray-400 text-xs font-bold uppercase tracking-widest;
+}
+
+.login-link-26 {
+  @apply text-indigo-600 dark:text-indigo-400 hover:underline;
+}

@@ -1,0 +1,111 @@
+.reportednotes-div-1 {
+  @apply flex justify-center items-center h-64;
+}
+
+.reportednotes-div-2 {
+  @apply rounded-full h-12 w-12 border-b-2 border-indigo-600;
+}
+
+.reportednotes-div-3 {
+  @apply space-y-8;
+}
+
+.reportednotes-h1-4 {
+  @apply text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic;
+}
+
+.reportednotes-span-5 {
+  @apply text-red-500;
+}
+
+.reportednotes-p-6 {
+  @apply text-gray-500 mt-1 text-sm font-medium;
+}
+
+.reportednotes-div-7 {
+  @apply bg-white dark:bg-slate-900 rounded-[32px] border border-gray-100 dark:border-slate-800 p-16 text-center shadow-sm;
+}
+
+.reportednotes-div-8 {
+  @apply w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-green-500 mx-auto mb-6;
+}
+
+.reportednotes-h3-9 {
+  @apply text-xl font-black text-gray-800 dark:text-white uppercase tracking-tight;
+}
+
+.reportednotes-p-10 {
+  @apply text-gray-400 mt-2 text-sm font-bold uppercase tracking-widest;
+}
+
+.reportednotes-div-11 {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+}
+
+.reportednotes-div-12 {
+  @apply bg-white dark:bg-slate-900 rounded-[32px] border border-gray-100 dark:border-slate-800 p-6 shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between;
+}
+
+.reportednotes-div-13 {
+  @apply flex items-start justify-between mb-4;
+}
+
+.reportednotes-div-14 {
+  @apply flex items-center gap-3;
+}
+
+.reportednotes-div-15 {
+  @apply w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded-2xl flex items-center justify-center text-red-500 shrink-0;
+}
+
+.reportednotes-span-16 {
+  @apply text-[10px] font-black uppercase tracking-widest text-red-500 bg-red-50 dark:bg-red-900/30 px-3 py-1 rounded-full;
+}
+
+.reportednotes-span-17 {
+  @apply text-xs font-bold text-gray-400 flex items-center gap-1;
+}
+
+.reportednotes-div-18 {
+  @apply mb-6;
+}
+
+.reportednotes-p-19 {
+  @apply text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1 ml-1;
+}
+
+.reportednotes-p-20 {
+  @apply font-bold text-gray-900 dark:text-white text-lg truncate mb-4;
+}
+
+.reportednotes-div-21 {
+  @apply bg-gray-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-gray-100 dark:border-slate-800;
+}
+
+.reportednotes-p-22 {
+  @apply text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-1;
+}
+
+.reportednotes-p-23 {
+  @apply text-sm font-medium text-gray-800 dark:text-gray-200 leading-relaxed italic;
+}
+
+.reportednotes-p-24 {
+  @apply text-[10px] font-bold text-gray-400 mt-3 border-t border-gray-200 dark:border-gray-700 pt-3;
+}
+
+.reportednotes-span-25 {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.reportednotes-div-26 {
+  @apply flex flex-col sm:flex-row gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-slate-800;
+}
+
+.reportednotes-div-27 {
+  @apply flex-1 flex items-center justify-center gap-1.5 px-4 py-3 bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-300 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-slate-700 transition disabled:opacity-50;
+}
+
+.reportednotes-div-28 {
+  @apply flex-1 flex items-center justify-center gap-1.5 px-4 py-3 bg-red-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-red-600 transition shadow-lg shadow-red-200 dark:shadow-none disabled:opacity-50;
+}

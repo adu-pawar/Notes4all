@@ -1,0 +1,91 @@
+.notificationdropdown-ficheck-1 {
+  @apply text-green-500;
+}
+
+.notificationdropdown-fiinfo-2 {
+  @apply text-red-500;
+}
+
+.notificationdropdown-fiheart-3 {
+  @apply text-pink-500 fill-pink-500;
+}
+
+.notificationdropdown-fifiletext-4 {
+  @apply text-indigo-500;
+}
+
+.notificationdropdown-fibell-5 {
+  @apply text-gray-500;
+}
+
+.notificationdropdown-div-6 {
+  @apply relative;
+}
+
+.notificationdropdown-div-7 {
+  @apply relative p-2.5 rounded-2xl bg-gray-50 dark:bg-slate-900 text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition shadow-sm;
+}
+
+.notificationdropdown-span-8 {
+  @apply absolute top-1 right-1 w-3.5 h-3.5 bg-red-500 text-white text-[8px] font-bold flex items-center justify-center rounded-full border border-white dark:border-slate-900;
+}
+
+.notificationdropdown-div-9 {
+  @apply absolute right-0 mt-3 w-80 sm:w-96 bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-slate-800 overflow-hidden z-[100];
+}
+
+.notificationdropdown-div-10 {
+  @apply px-5 py-4 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between;
+}
+
+.notificationdropdown-h3-11 {
+  @apply font-black text-gray-900 dark:text-white uppercase tracking-widest text-sm italic;
+}
+
+.notificationdropdown-button-12 {
+  @apply text-[10px] font-black text-indigo-600 uppercase hover:underline;
+}
+
+.notificationdropdown-div-13 {
+  @apply max-h-80 overflow-y-auto overscroll-contain;
+}
+
+.notificationdropdown-div-14 {
+  @apply p-8 text-center;
+}
+
+.notificationdropdown-fibell-15 {
+  @apply mx-auto text-gray-300 dark:text-gray-600 mb-2;
+}
+
+.notificationdropdown-p-16 {
+  @apply text-[10px] uppercase font-bold text-gray-400 tracking-widest;
+}
+
+.notificationdropdown-div-17 {
+  @apply divide-y divide-gray-50 dark:divide-slate-800;
+}
+
+.notificationdropdown-div-18 {
+  @apply mt-1 shrink-0;
+}
+
+.notificationdropdown-div-19 {
+  @apply flex-1 min-w-0;
+}
+
+.notificationdropdown-div-20 {
+  @apply flex items-center gap-2 mt-1;
+}
+
+.notificationdropdown-span-21 {
+  @apply text-[10px] font-bold text-gray-400 uppercase tracking-widest;
+}
+
+.notificationdropdown-link-22 {
+  @apply text-[10px] font-black text-indigo-600 uppercase hover:underline;
+}
+
+.notificationdropdown-div-23 {
+  @apply w-2 h-2 rounded-full bg-indigo-600 shrink-0 mt-2;
+}

@@ -25,6 +25,8 @@ function NotificationDropdown() {
       } else {
         setNotifications([]);
       }
+    }, (error) => {
+      console.error("Notifications read error:", error);
     });
 
     return () => unsubscribe();
@@ -69,11 +71,11 @@ function NotificationDropdown() {
 
   const getIcon = (type) => {
     switch (type) {
-      case 'approval': return <FiCheck className="text-green-500" />;
-      case 'rejection': return <FiInfo className="text-red-500" />;
-      case 'like': return <FiHeart className="text-pink-500 fill-pink-500" />;
-      case 'feedback': return <FiFileText className="text-indigo-500" />;
-      default: return <FiBell className="text-gray-500" />;
+      case 'approval': return <FiCheck className="notificationdropdown-ficheck-1" />;
+      case 'rejection': return <FiInfo className="notificationdropdown-fiinfo-2" />;
+      case 'like': return <FiHeart className="notificationdropdown-fiheart-3" />;
+      case 'feedback': return <FiFileText className="notificationdropdown-fifiletext-4" />;
+      default: return <FiBell className="notificationdropdown-fibell-5" />;
     }
   };
 
@@ -93,67 +95,67 @@ function NotificationDropdown() {
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="notificationdropdown-div-6" ref={dropdownRef}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2.5 rounded-2xl bg-gray-50 dark:bg-slate-900 text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition shadow-sm"
+        className="notificationdropdown-div-7"
       >
         <FiBell size={20} />
         {unreadCount > 0 && (
-          <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-red-500 text-white text-[8px] font-bold flex items-center justify-center rounded-full border border-white dark:border-slate-900 animate-pulse">
+          <span className="animate-pulse notificationdropdown-span-8">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>
         )}
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-3 w-80 sm:w-96 bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-slate-800 overflow-hidden z-[100] animate-in slide-in-from-top-2 duration-200">
-          <div className="px-5 py-4 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between">
-            <h3 className="font-black text-gray-900 dark:text-white uppercase tracking-widest text-sm italic">Notifications</h3>
+        <div className="animate-in slide-in-from-top-2 duration-200 notificationdropdown-div-9">
+          <div className="notificationdropdown-div-10">
+            <h3 className="notificationdropdown-h3-11">Notifications</h3>
             {unreadCount > 0 && (
               <button 
                 onClick={markAllAsRead}
-                className="text-[10px] font-black text-indigo-600 uppercase hover:underline"
+                className="notificationdropdown-button-12"
               >
                 Mark all read
               </button>
             )}
           </div>
 
-          <div className="max-h-80 overflow-y-auto overscroll-contain">
+          <div className="notificationdropdown-div-13">
             {notifications.length === 0 ? (
-              <div className="p-8 text-center">
-                <FiBell className="mx-auto text-gray-300 dark:text-gray-600 mb-2" size={24} />
-                <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest">No notifications yet</p>
+              <div className="notificationdropdown-div-14">
+                <FiBell className="notificationdropdown-fibell-15" size={24} />
+                <p className="notificationdropdown-p-16">No notifications yet</p>
               </div>
             ) : (
-              <div className="divide-y divide-gray-50 dark:divide-slate-800">
+              <div className="notificationdropdown-div-17">
                 {notifications.map((notif) => (
                   <div 
                     key={notif.id} 
                     onClick={() => handleMarkAsRead(notif.id)}
                     className={`p-4 hover:bg-gray-50 dark:hover:bg-slate-800/50 transition cursor-pointer flex gap-3 ${!notif.read ? 'bg-indigo-50/50 dark:bg-indigo-900/10' : ''}`}
                   >
-                    <div className="mt-1 shrink-0">
+                    <div className="notificationdropdown-div-18">
                       {getIcon(notif.type)}
                     </div>
-                    <div className="flex-1 min-w-0">
+                    <div className="notificationdropdown-div-19">
                       <p className={`text-sm ${!notif.read ? 'font-bold text-gray-900 dark:text-white' : 'font-medium text-gray-600 dark:text-gray-300'}`}>
                         {notif.message}
                       </p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                      <div className="notificationdropdown-div-20">
+                        <span className="notificationdropdown-span-21">
                           {timeAgo(notif.timestamp)}
                         </span>
                         {notif.link && (
-                          <Link to={notif.link} className="text-[10px] font-black text-indigo-600 uppercase hover:underline">
+                          <Link to={notif.link} className="notificationdropdown-link-22">
                             View 
                           </Link>
                         )}
                       </div>
                     </div>
                     {!notif.read && (
-                      <div className="w-2 h-2 rounded-full bg-indigo-600 shrink-0 mt-2"></div>
+                      <div className="notificationdropdown-div-23"></div>
                     )}
                   </div>
                 ))}

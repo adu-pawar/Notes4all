@@ -31,76 +31,76 @@ function Signup() {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center mesh-bg px-4 overflow-y-auto pt-20 pb-10">
-      <div className="glass bg-white/70 dark:bg-slate-900/80 p-8 md:p-12 rounded-[40px] w-full max-w-2xl border border-white/40 dark:border-slate-800 shadow-2xl transition-all my-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic">
-            Join <span className="text-indigo-600">NOTES4ALL</span>
+    <div className="mesh-bg signup-div-1">
+      <div className="glass signup-div-2">
+        <div className="signup-div-3">
+          <h2 className="signup-h2-4">
+            Join <span className="signup-span-5">NOTES4ALL</span>
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 font-bold text-xs mt-2 uppercase tracking-widest">Create your student profile</p>
+          <p className="signup-p-6">Create your student profile</p>
         </div>
 
         {error && (
-          <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 text-red-600 dark:text-red-400 px-6 py-4 rounded-3xl mb-8 flex items-center justify-center space-x-3 animate-in fade-in slide-in-from-top-4 duration-300 shadow-lg shadow-red-100 dark:shadow-none">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
-            <span className="text-[11px] font-black uppercase tracking-widest">{error}</span>
+          <div className="animate-in fade-in slide-in-from-top-4 duration-300 signup-div-7">
+            <div className="animate-pulse signup-div-8"></div>
+            <span className="signup-span-9">{error}</span>
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="col-span-2 space-y-2">
-            <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Full Name</label>
-            <div className="relative">
-              <FiUser className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" />
+        <form onSubmit={handleSubmit} className="signup-form-10">
+          <div className="signup-div-11">
+            <label className="signup-label-12">Full Name</label>
+            <div className="signup-div-13">
+              <FiUser className="signup-fiuser-14" />
               <input 
                 type="text" required
                 value={name} onChange={(e) => setName(e.target.value)}
-                className="w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all"
+                className="signup-div-15"
                 placeholder="Enter your name"
               />
             </div>
           </div>
 
-          <div className="col-span-2 md:col-span-1 space-y-2">
-            <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Email Address</label>
-            <div className="relative">
-              <FiMail className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" />
+          <div className="signup-div-16">
+            <label className="signup-label-17">Email Address</label>
+            <div className="signup-div-18">
+              <FiMail className="signup-fimail-19" />
               <input 
                 type="email" required
                 value={email} onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all"
+                className="signup-div-20"
                 placeholder="Enter your email"
               />
             </div>
           </div>
 
-          <div className="col-span-2 md:col-span-1 space-y-2">
-            <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Password</label>
-            <div className="relative">
-              <FiLock className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" />
+          <div className="signup-div-21">
+            <label className="signup-label-22">Password</label>
+            <div className="signup-div-23">
+              <FiLock className="signup-filock-24" />
               <input 
                 type={showPassword ? "text" : "password"} required
                 value={password} onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-12 pr-12 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all"
+                className="signup-div-25"
                 placeholder="Create a password"
               />
               <button 
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-indigo-600 focus:outline-none transition-colors"
+                className="signup-div-26"
               >
                 {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
               </button>
             </div>
           </div>
 
-          <div className="col-span-2 md:col-span-1 space-y-2">
-            <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Branch</label>
-            <div className="relative">
-              <FiBookOpen className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" />
+          <div className="signup-div-27">
+            <label className="signup-label-28">Branch</label>
+            <div className="signup-div-29">
+              <FiBookOpen className="signup-fibookopen-30" />
               <select 
                 required value={branch} onChange={(e) => setBranch(e.target.value)}
-                className="w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all appearance-none cursor-pointer"
+                className="signup-div-31"
               >
                 <option value="">Select</option>
                 <option value="CSE">Computer Science</option>
@@ -114,13 +114,13 @@ function Signup() {
             </div>
           </div>
 
-          <div className="col-span-2 md:col-span-1 space-y-2">
-            <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Division</label>
-            <div className="relative">
-              <FiActivity className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" />
+          <div className="signup-div-32">
+            <label className="signup-label-33">Division</label>
+            <div className="signup-div-34">
+              <FiActivity className="signup-fiactivity-35" />
               <select 
                 required value={division} onChange={(e) => setDivision(e.target.value)}
-                className="w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all appearance-none cursor-pointer"
+                className="signup-div-36"
               >
                 <option value="">Select</option>
                 {[1, 2, 3, 4, 5].map(d => (
@@ -133,15 +133,15 @@ function Signup() {
           <button 
             type="submit" 
             disabled={loading}
-            className="col-span-2 flex items-center justify-center space-x-2 py-5 px-4 rounded-[28px] bg-gray-900 dark:bg-indigo-600 text-white font-black uppercase tracking-[0.2em] shadow-2xl hover:bg-indigo-600 dark:hover:bg-indigo-700 transition duration-300 disabled:opacity-50 mt-4"
+            className="duration-300 signup-button-37"
           >
             <span>{loading ? 'Processing...' : 'Create Account'}</span>
             {!loading && <FiArrowRight size={18} />}
           </button>
         </form>
 
-        <p className="mt-8 text-center text-gray-500 dark:text-gray-400 text-xs font-bold uppercase tracking-widest">
-          Already a member? <Link to="/login" className="text-indigo-600 dark:text-indigo-400 hover:underline">Log In Here</Link>
+        <p className="signup-p-38">
+          Already a member? <Link to="/login" className="signup-link-39">Log In Here</Link>
         </p>
       </div>
     </div>

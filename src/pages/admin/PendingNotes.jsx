@@ -114,73 +114,73 @@ function PendingNotes() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+      <div className="pendingnotes-div-1">
+        <div className="animate-spin pendingnotes-div-2"></div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
+    <div className="pendingnotes-div-3">
       {/* Header */}
       <div>
-        <h1 className="text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic">
-          Pending <span className="text-amber-500">Approvals</span>
+        <h1 className="pendingnotes-h1-4">
+          Pending <span className="pendingnotes-span-5">Approvals</span>
         </h1>
-        <p className="text-gray-500 mt-1 text-sm font-medium">
+        <p className="pendingnotes-p-6">
           {pendingNotes.length} note{pendingNotes.length !== 1 ? 's' : ''} waiting for review
         </p>
       </div>
 
       {pendingNotes.length === 0 ? (
-        <div className="bg-white dark:bg-slate-900 rounded-[32px] border border-gray-100 dark:border-slate-800 p-16 text-center">
-          <div className="w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">✅</div>
-          <h3 className="text-xl font-black text-gray-800 dark:text-white uppercase">All Clear!</h3>
-          <p className="text-gray-400 mt-2 text-sm">No pending notes to review. Great job!</p>
+        <div className="pendingnotes-div-7">
+          <div className="pendingnotes-div-8">✅</div>
+          <h3 className="pendingnotes-h3-9">All Clear!</h3>
+          <p className="pendingnotes-p-10">No pending notes to review. Great job!</p>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="pendingnotes-div-11">
           {pendingNotes.map((note) => (
             <div
               key={note.id}
-              className="bg-white dark:bg-slate-900 rounded-[24px] border border-gray-100 dark:border-slate-800 p-6 hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row md:items-center gap-5"
+              className="duration-300 pendingnotes-div-12"
             >
               {/* Left: Icon */}
-              <div className="w-14 h-14 bg-amber-50 dark:bg-amber-900/20 rounded-2xl flex items-center justify-center text-amber-600 shrink-0">
+              <div className="pendingnotes-div-13">
                 <FiFileText size={24} />
               </div>
 
               {/* Middle: Info */}
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-black text-gray-900 dark:text-white truncate">{note.title}</h3>
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
-                  <span className="text-xs font-bold text-gray-500">By {note.uploaderName || 'Student'}</span>
-                  <span className="text-xs text-gray-300">•</span>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 px-2.5 py-0.5 rounded-full">
+              <div className="pendingnotes-div-14">
+                <h3 className="pendingnotes-h3-15">{note.title}</h3>
+                <div className="pendingnotes-div-16">
+                  <span className="pendingnotes-span-17">By {note.uploaderName || 'Student'}</span>
+                  <span className="pendingnotes-span-18">•</span>
+                  <span className="pendingnotes-span-19">
                     {note.subject}
                   </span>
-                  <span className="text-xs text-gray-300">•</span>
-                  <span className="text-xs text-gray-400">{formatDate(note.uploadedAt)} &bull; {formatSize(note.fileSize)}</span>
+                  <span className="pendingnotes-span-20">•</span>
+                  <span className="pendingnotes-span-21">{formatDate(note.uploadedAt)} &bull; {formatSize(note.fileSize)}</span>
                 </div>
               </div>
 
               {/* Right: Actions */}
-              <div className="flex items-center gap-2 shrink-0">
+              <div className="pendingnotes-div-22">
                 <button
                   onClick={() => window.open(`/view?id=${note.id}&url=${encodeURIComponent(note.fileUrl)}&title=${encodeURIComponent(note.title)}`, '_blank')}
-                  className="flex items-center gap-1.5 px-4 py-2.5 bg-gray-50 dark:bg-slate-800 text-gray-600 dark:text-gray-300 rounded-xl text-xs font-bold hover:bg-gray-100 dark:hover:bg-slate-700 transition"
+                  className="pendingnotes-div-23"
                 >
                   <FiExternalLink size={14} /> View
                 </button>
                 <button
                   onClick={() => openRejectModal(note)}
-                  className="flex items-center gap-1.5 px-4 py-2.5 bg-red-50 dark:bg-red-900/20 text-red-600 rounded-xl text-xs font-bold hover:bg-red-100 dark:hover:bg-red-900/30 transition"
+                  className="pendingnotes-div-24"
                 >
                   <FiX size={14} /> Reject
                 </button>
                 <button
                   onClick={() => handleApprove(note)}
-                  className="flex items-center gap-1.5 px-4 py-2.5 bg-green-600 text-white rounded-xl text-xs font-bold hover:bg-green-700 shadow-lg shadow-green-200 dark:shadow-none transition"
+                  className="pendingnotes-div-25"
                 >
                   <FiCheck size={14} /> Approve
                 </button>
@@ -192,49 +192,49 @@ function PendingNotes() {
 
       {/* Rejection Modal */}
       {rejectingNote && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm" onClick={closeRejectModal}></div>
-          <div className="relative bg-white dark:bg-slate-900 rounded-[40px] shadow-2xl border border-white/20 w-full max-w-lg overflow-hidden animate-in zoom-in-95 duration-300">
-            <div className="p-8 md:p-10">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-red-50 dark:bg-red-900/30 rounded-2xl flex items-center justify-center text-red-600 shrink-0">
+        <div className="pendingnotes-div-26">
+          <div className="pendingnotes-div-27" onClick={closeRejectModal}></div>
+          <div className="animate-in zoom-in-95 duration-300 pendingnotes-div-28">
+            <div className="pendingnotes-div-29">
+              <div className="pendingnotes-div-30">
+                <div className="pendingnotes-div-31">
                   <FiAlertCircle size={28} />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-black text-gray-900 dark:text-white uppercase italic leading-none">Reject Note</h2>
-                  <p className="text-gray-500 font-bold text-[10px] uppercase tracking-widest mt-1">Provide feedback to the student</p>
+                  <h2 className="pendingnotes-h2-32">Reject Note</h2>
+                  <p className="pendingnotes-p-33">Provide feedback to the student</p>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="p-4 bg-gray-50 dark:bg-slate-800/50 rounded-2xl border border-gray-100 dark:border-slate-800">
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Target Note</p>
-                  <p className="text-sm font-black text-gray-900 dark:text-white truncate">{rejectingNote.title}</p>
+              <div className="pendingnotes-div-34">
+                <div className="pendingnotes-div-35">
+                  <p className="pendingnotes-p-36">Target Note</p>
+                  <p className="pendingnotes-p-37">{rejectingNote.title}</p>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Reason for Rejection</label>
+                <div className="pendingnotes-div-38">
+                  <label className="pendingnotes-label-39">Reason for Rejection</label>
                   <textarea
                     rows="4"
                     value={rejectionReason}
                     onChange={(e) => setRejectionReason(e.target.value)}
                     placeholder="E.g. Quality is low, incorrect subject, contains prohibited content..."
-                    className="w-full px-6 py-4 bg-gray-50 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-red-500 text-gray-900 dark:text-white font-bold transition-all placeholder:text-gray-400"
+                    className="pendingnotes-div-40"
                   />
                 </div>
               </div>
 
-              <div className="flex gap-4 mt-8">
+              <div className="pendingnotes-div-41">
                 <button
                   onClick={closeRejectModal}
-                  className="flex-1 py-4 bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-300 rounded-[20px] text-xs font-black uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-slate-700 transition"
+                  className="pendingnotes-button-42"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleConfirmReject}
                   disabled={isSubmitting || !rejectionReason.trim()}
-                  className="flex-1 py-4 bg-red-600 text-white rounded-[20px] text-xs font-black uppercase tracking-widest hover:bg-red-700 shadow-xl shadow-red-200 dark:shadow-none transition disabled:opacity-50"
+                  className="pendingnotes-button-43"
                 >
                   {isSubmitting ? 'Rejecting...' : 'Confirm Reject'}
                 </button>

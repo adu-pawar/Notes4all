@@ -1,0 +1,155 @@
+.signup-div-1 {
+  @apply fixed inset-0 flex items-center justify-center px-4 overflow-y-auto pt-20 pb-10;
+}
+
+.signup-div-2 {
+  @apply bg-white/70 dark:bg-slate-900/80 p-8 md:p-12 rounded-[40px] w-full max-w-2xl border border-white/40 dark:border-slate-800 shadow-2xl transition-all my-auto;
+}
+
+.signup-div-3 {
+  @apply text-center mb-8;
+}
+
+.signup-h2-4 {
+  @apply text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic;
+}
+
+.signup-span-5 {
+  @apply text-indigo-600;
+}
+
+.signup-p-6 {
+  @apply text-gray-500 dark:text-gray-400 font-bold text-xs mt-2 uppercase tracking-widest;
+}
+
+.signup-div-7 {
+  @apply bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 text-red-600 dark:text-red-400 px-6 py-4 rounded-3xl mb-8 flex items-center justify-center space-x-3 shadow-lg shadow-red-100 dark:shadow-none;
+}
+
+.signup-div-8 {
+  @apply w-2 h-2 bg-red-500 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.5)];
+}
+
+.signup-span-9 {
+  @apply text-[11px] font-black uppercase tracking-widest;
+}
+
+.signup-form-10 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.signup-div-11 {
+  @apply col-span-2 space-y-2;
+}
+
+.signup-label-12 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1;
+}
+
+.signup-div-13 {
+  @apply relative;
+}
+
+.signup-fiuser-14 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.signup-div-15 {
+  @apply w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all;
+}
+
+.signup-div-16 {
+  @apply col-span-2 md:col-span-1 space-y-2;
+}
+
+.signup-label-17 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1;
+}
+
+.signup-div-18 {
+  @apply relative;
+}
+
+.signup-fimail-19 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.signup-div-20 {
+  @apply w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all;
+}
+
+.signup-div-21 {
+  @apply col-span-2 md:col-span-1 space-y-2;
+}
+
+.signup-label-22 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1;
+}
+
+.signup-div-23 {
+  @apply relative;
+}
+
+.signup-filock-24 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.signup-div-25 {
+  @apply w-full pl-12 pr-12 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all;
+}
+
+.signup-div-26 {
+  @apply absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-indigo-600 focus:outline-none transition-colors;
+}
+
+.signup-div-27 {
+  @apply col-span-2 md:col-span-1 space-y-2;
+}
+
+.signup-label-28 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1;
+}
+
+.signup-div-29 {
+  @apply relative;
+}
+
+.signup-fibookopen-30 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.signup-div-31 {
+  @apply w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all appearance-none cursor-pointer;
+}
+
+.signup-div-32 {
+  @apply col-span-2 md:col-span-1 space-y-2;
+}
+
+.signup-label-33 {
+  @apply block text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 ml-1;
+}
+
+.signup-div-34 {
+  @apply relative;
+}
+
+.signup-fiactivity-35 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.signup-div-36 {
+  @apply w-full pl-12 pr-6 py-4 bg-gray-50/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all appearance-none cursor-pointer;
+}
+
+.signup-button-37 {
+  @apply col-span-2 flex items-center justify-center space-x-2 py-5 px-4 rounded-[28px] bg-gray-900 dark:bg-indigo-600 text-white font-black uppercase tracking-[0.2em] shadow-2xl hover:bg-indigo-600 dark:hover:bg-indigo-700 transition disabled:opacity-50 mt-4;
+}
+
+.signup-p-38 {
+  @apply mt-8 text-center text-gray-500 dark:text-gray-400 text-xs font-bold uppercase tracking-widest;
+}
+
+.signup-link-39 {
+  @apply text-indigo-600 dark:text-indigo-400 hover:underline;
+}

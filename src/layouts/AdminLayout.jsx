@@ -7,20 +7,20 @@ function AdminLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gray-50 dark:bg-slate-950">
+    <div className="adminlayout-div-1">
       {/* Mobile Backdrop */}
       {isSidebarOpen && (
         <div 
-          className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-40 lg:hidden"
+          className="adminlayout-div-2"
           onClick={() => setIsSidebarOpen(false)}
         ></div>
       )}
 
       <AdminSidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       
-      <div className="flex-1 flex flex-col min-h-screen overflow-hidden">
+      <div className="adminlayout-div-3">
         <AdminNavbar setIsSidebarOpen={setIsSidebarOpen} />
-        <main className="flex-1 p-4 md:p-8 overflow-y-auto bg-gray-50 dark:bg-slate-950">
+        <main className="adminlayout-main-4">
           <Outlet />
         </main>
       </div>

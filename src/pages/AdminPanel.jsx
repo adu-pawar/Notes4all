@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 function AdminPanel() {
   const [activeTab, setActiveTab] = useState('pending');
 
@@ -10,13 +9,13 @@ function AdminPanel() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 mt-8">
-      <div className="flex justify-between items-end mb-8">
+    <div className="adminpanel-div-1">
+      <div className="adminpanel-div-2">
         <div>
-          <h2 className="text-3xl font-extrabold text-gray-800">Admin Control Center</h2>
-          <p className="text-gray-500 mt-1">Manage notes, approvals, and platform health.</p>
+          <h2 className="adminpanel-h2-3">Admin Control Center</h2>
+          <p className="adminpanel-p-4">Manage notes, approvals, and platform health.</p>
         </div>
-        <div className="flex space-x-4">
+        <div className="adminpanel-div-5">
           <button 
             onClick={() => setActiveTab('pending')}
             className={`px-5 py-2 rounded-lg font-medium transition-colors ${activeTab === 'pending' ? 'bg-indigo-600 text-white' : 'bg-white text-gray-700 border border-gray-300'}`}
@@ -32,36 +31,36 @@ function AdminPanel() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="adminpanel-div-6">
         {activeTab === 'pending' && (
           <div>
-            <div className="p-6 border-b border-gray-100 bg-gray-50">
-              <h3 className="text-xl font-bold text-gray-800">Pending Approvals</h3>
+            <div className="adminpanel-div-7">
+              <h3 className="adminpanel-h3-8">Pending Approvals</h3>
             </div>
-            <div className="divide-y divide-gray-100">
+            <div className="adminpanel-div-9">
               {pendingNotes.map(note => (
-                <div key={note.id} className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center hover:bg-gray-50 transition">
+                <div key={note.id} className="adminpanel-div-10">
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-800">{note.title}</h4>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <h4 className="adminpanel-h4-11">{note.title}</h4>
+                    <p className="adminpanel-p-12">
                       Uploaded by {note.uploader} on {note.date} • {note.branch}
                     </p>
                   </div>
-                  <div className="flex space-x-3 mt-4 md:mt-0">
-                    <button className="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition">
+                  <div className="adminpanel-div-13">
+                    <button className="adminpanel-button-14">
                       View PDF
                     </button>
-                    <button className="px-4 py-2 bg-red-100 text-red-700 rounded-lg text-sm font-medium hover:bg-red-200 transition">
+                    <button className="adminpanel-button-15">
                       Reject
                     </button>
-                    <button className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition">
+                    <button className="adminpanel-button-16">
                       Approve
                     </button>
                   </div>
                 </div>
               ))}
               {pendingNotes.length === 0 && (
-                <div className="p-12 text-center text-gray-500">
+                <div className="adminpanel-div-17">
                   No pending notes to review. Great job!
                 </div>
               )}
@@ -70,7 +69,7 @@ function AdminPanel() {
         )}
 
         {activeTab === 'users' && (
-          <div className="p-12 text-center text-gray-500">
+          <div className="adminpanel-div-18">
             User management interface will be displayed here.
           </div>
         )}

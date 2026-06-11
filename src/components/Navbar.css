@@ -1,0 +1,115 @@
+.navbar-nav-1 {
+  @apply bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 sticky top-0 z-50 transition-colors;
+}
+
+.navbar-div-2 {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.navbar-div-3 {
+  @apply flex justify-between items-center h-20;
+}
+
+.navbar-div-4 {
+  @apply flex items-center;
+}
+
+.navbar-link-5 {
+  @apply flex items-center space-x-2;
+}
+
+.navbar-div-6 {
+  @apply bg-indigo-600 p-2 rounded-xl group-hover:rotate-12 transition shadow-lg shadow-indigo-200 dark:shadow-none;
+}
+
+.navbar-span-7 {
+  @apply text-2xl text-white;
+}
+
+.navbar-span-8 {
+  @apply text-2xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic;
+}
+
+.navbar-span-9 {
+  @apply text-indigo-600 font-black;
+}
+
+.navbar-div-10 {
+  @apply hidden md:flex md:items-center md:space-x-4;
+}
+
+.navbar-link-11 {
+  @apply flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-bold transition-all;
+}
+
+.navbar-span-12 {
+  @apply group-hover:-translate-y-0.5 transition-transform;
+}
+
+.navbar-div-13 {
+  @apply flex items-center space-x-4;
+}
+
+.navbar-button-14 {
+  @apply p-2.5 rounded-2xl bg-gray-50 dark:bg-slate-900 text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition shadow-sm;
+}
+
+.navbar-div-15 {
+  @apply hidden sm:flex flex-col items-end;
+}
+
+.navbar-span-16 {
+  @apply text-[10px] font-black uppercase tracking-widest text-gray-400;
+}
+
+.navbar-span-17 {
+  @apply text-sm font-bold text-gray-900 dark:text-white;
+}
+
+.navbar-button-18 {
+  @apply hidden sm:flex p-2.5 rounded-2xl bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 hover:bg-red-100 transition;
+}
+
+.navbar-div-19 {
+  @apply hidden sm:flex items-center space-x-4;
+}
+
+.navbar-link-20 {
+  @apply text-gray-600 dark:text-gray-400 hover:text-indigo-600 font-bold text-sm px-3;
+}
+
+.navbar-link-21 {
+  @apply bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-2xl text-sm font-black uppercase tracking-widest transition shadow-lg shadow-indigo-100 dark:shadow-none;
+}
+
+.navbar-div-22 {
+  @apply md:hidden p-2.5 rounded-2xl bg-gray-50 dark:bg-slate-900 text-gray-600 dark:text-gray-400 hover:text-indigo-600 transition;
+}
+
+.navbar-div-23 {
+  @apply md:hidden bg-white dark:bg-slate-950 border-t border-gray-100 dark:border-slate-800;
+}
+
+.navbar-div-24 {
+  @apply px-4 pt-2 pb-6 space-y-1;
+}
+
+.navbar-div-25 {
+  @apply flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-4 py-4 rounded-2xl text-base font-bold transition-all;
+}
+
+.navbar-div-26 {
+  @apply pt-4 mt-4 border-t border-gray-100 dark:border-slate-800 flex flex-col space-y-3;
+}
+
+.navbar-div-27 {
+  @apply flex items-center justify-center space-x-2 w-full py-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-2xl font-bold transition;
+}
+
+.navbar-div-28 {
+  @apply flex items-center justify-center w-full py-4 bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white rounded-2xl font-bold transition;
+}
+
+.navbar-div-29 {
+  @apply flex items-center justify-center w-full py-4 bg-indigo-600 text-white rounded-2xl font-black uppercase tracking-widest transition;
+}

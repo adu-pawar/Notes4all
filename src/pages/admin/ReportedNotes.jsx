@@ -87,82 +87,82 @@ function ReportedNotes() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+      <div className="reportednotes-div-1">
+        <div className="animate-spin reportednotes-div-2"></div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
+    <div className="reportednotes-div-3">
       <div>
-        <h1 className="text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic">
-          Reported <span className="text-red-500">Notes</span>
+        <h1 className="reportednotes-h1-4">
+          Reported <span className="reportednotes-span-5">Notes</span>
         </h1>
-        <p className="text-gray-500 mt-1 text-sm font-medium">
+        <p className="reportednotes-p-6">
           {reports.length} issue{reports.length !== 1 ? 's' : ''} flagged by the community
         </p>
       </div>
 
       {reports.length === 0 ? (
-        <div className="bg-white dark:bg-slate-900 rounded-[32px] border border-gray-100 dark:border-slate-800 p-16 text-center shadow-sm">
-          <div className="w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-green-500 mx-auto mb-6">
+        <div className="reportednotes-div-7">
+          <div className="reportednotes-div-8">
             <FiCheckCircle size={40} />
           </div>
-          <h3 className="text-xl font-black text-gray-800 dark:text-white uppercase tracking-tight">Zero Active Reports</h3>
-          <p className="text-gray-400 mt-2 text-sm font-bold uppercase tracking-widest">The community is happy!</p>
+          <h3 className="reportednotes-h3-9">Zero Active Reports</h3>
+          <p className="reportednotes-p-10">The community is happy!</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="reportednotes-div-11">
           {reports.map((report) => (
-            <div key={report.id} className="bg-white dark:bg-slate-900 rounded-[32px] border border-gray-100 dark:border-slate-800 p-6 shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between">
+            <div key={report.id} className="reportednotes-div-12">
               <div>
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-red-50 dark:bg-red-900/20 rounded-2xl flex items-center justify-center text-red-500 shrink-0">
+                <div className="reportednotes-div-13">
+                  <div className="reportednotes-div-14">
+                    <div className="reportednotes-div-15">
                       <FiFlag size={20} />
                     </div>
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-red-500 bg-red-50 dark:bg-red-900/30 px-3 py-1 rounded-full">
+                      <span className="reportednotes-span-16">
                         Flagged content
                       </span>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-gray-400 flex items-center gap-1">
+                  <span className="reportednotes-span-17">
                     <FiClock /> {formatDate(report.timestamp)}
                   </span>
                 </div>
 
-                <div className="mb-6">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1 ml-1">Target Note</p>
-                  <p className="font-bold text-gray-900 dark:text-white text-lg truncate mb-4">{report.noteTitle}</p>
+                <div className="reportednotes-div-18">
+                  <p className="reportednotes-p-19">Target Note</p>
+                  <p className="reportednotes-p-20">{report.noteTitle}</p>
 
-                  <div className="bg-gray-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-gray-100 dark:border-slate-800">
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-1">
+                  <div className="reportednotes-div-21">
+                    <p className="reportednotes-p-22">
                       <FiAlertTriangle /> Reported Issue
                     </p>
-                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200 leading-relaxed italic">
+                    <p className="reportednotes-p-23">
                       "{report.reason}"
                     </p>
-                    <p className="text-[10px] font-bold text-gray-400 mt-3 border-t border-gray-200 dark:border-gray-700 pt-3">
-                      Reported by <span className="text-gray-700 dark:text-gray-300">USER ID: {report.reportedBy}</span>
+                    <p className="reportednotes-p-24">
+                      Reported by <span className="reportednotes-span-25">USER ID: {report.reportedBy}</span>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-slate-800">
+              <div className="reportednotes-div-26">
                 <button
                   onClick={() => handleResolve(report.id)}
                   disabled={processingId === report.id}
-                  className="flex-1 flex items-center justify-center gap-1.5 px-4 py-3 bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-300 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-slate-700 transition disabled:opacity-50"
+                  className="reportednotes-div-27"
                 >
                   <FiCheckCircle size={14} /> Dismiss Report
                 </button>
                 <button
                   onClick={() => handleDeleteNote(report.noteId, report.id)}
                   disabled={processingId === report.id}
-                  className="flex-1 flex items-center justify-center gap-1.5 px-4 py-3 bg-red-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-red-600 transition shadow-lg shadow-red-200 dark:shadow-none disabled:opacity-50"
+                  className="reportednotes-div-28"
                 >
                   <FiTrash2 size={14} /> Delete Target Note
                 </button>

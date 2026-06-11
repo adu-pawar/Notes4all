@@ -1,4 +1,25 @@
 @import "tailwindcss";
+
+@import "./components/admin/AdminNavbar.css";
+@import "./components/admin/AdminSidebar.css";
+@import "./components/Navbar.css";
+@import "./components/NotificationDropdown.css";
+@import "./layouts/AdminLayout.css";
+@import "./pages/admin/AdminDashboard.css";
+@import "./pages/admin/AdminFeedbacks.css";
+@import "./pages/admin/PendingNotes.css";
+@import "./pages/admin/PublishedNotes.css";
+@import "./pages/admin/ReportedNotes.css";
+@import "./pages/admin/UserManagement.css";
+@import "./pages/AdminPanel.css";
+@import "./pages/Dashboard.css";
+@import "./pages/Feedback.css";
+@import "./pages/Home.css";
+@import "./pages/Login.css";
+@import "./pages/PdfViewer.css";
+@import "./pages/Signup.css";
+@import "./pages/Upload.css";
+@import "./App.css";
 @variant dark (&:where(.dark, .dark *));
 
 @theme {

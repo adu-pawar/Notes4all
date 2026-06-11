@@ -35,17 +35,17 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <div className="min-h-screen flex flex-col font-sans bg-white dark:bg-slate-950 transition-colors duration-300">
+        <div className="duration-300 app-div-1">
           <Routes>
             {/* Student/Public Routes - wrapped with Navbar */}
-            <Route path="/" element={<><Navbar /><main className="flex-1 w-full max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"><Home /></main><BottomNav /></>} />
+            <Route path="/" element={<><Navbar /><main className="app-main-2"><Home /></main><BottomNav /></>} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/view" element={<PdfViewer />} />
-            <Route path="/feedback" element={<><Navbar /><main className="flex-1 w-full max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"><Feedback /></main><BottomNav /></>} />
+            <Route path="/feedback" element={<><Navbar /><main className="app-main-3"><Feedback /></main><BottomNav /></>} />
             
-            <Route path="/upload" element={<ProtectedRoute><Navbar /><main className="flex-1 w-full max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"><Upload /></main><BottomNav /></ProtectedRoute>} />
-            <Route path="/dashboard" element={<ProtectedRoute><Navbar /><main className="flex-1 w-full max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"><Dashboard /></main><BottomNav /></ProtectedRoute>} />
+            <Route path="/upload" element={<ProtectedRoute><Navbar /><main className="app-main-4"><Upload /></main><BottomNav /></ProtectedRoute>} />
+            <Route path="/dashboard" element={<ProtectedRoute><Navbar /><main className="app-main-5"><Dashboard /></main><BottomNav /></ProtectedRoute>} />
 
             {/* Separate Admin Routes */}
             <Route path="/admin" element={<AdminRoute><AdminLayout /></AdminRoute>}>

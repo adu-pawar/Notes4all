@@ -1,0 +1,223 @@
+.dashboard-div-1 {
+  @apply flex justify-center items-center h-96;
+}
+
+.dashboard-div-2 {
+  @apply rounded-full h-12 w-12 border-b-2 border-indigo-600;
+}
+
+.dashboard-div-3 {
+  @apply max-w-7xl mx-auto mt-4 md:mt-8 px-4 pb-20 duration-700;
+}
+
+.dashboard-div-4 {
+  @apply bg-white dark:bg-slate-900 p-6 md:p-12 rounded-[32px] md:rounded-[40px] shadow-2xl border border-gray-100 dark:border-slate-800 flex flex-col lg:flex-row items-center justify-between gap-8;
+}
+
+.dashboard-div-5 {
+  @apply flex flex-col md:flex-row items-center text-center md:text-left md:space-x-6 gap-4 md:gap-0;
+}
+
+.dashboard-div-6 {
+  @apply bg-indigo-600 w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-lg shadow-indigo-100 dark:shadow-none;
+}
+
+.dashboard-fiuser-7 {
+  @apply text-white;
+}
+
+.dashboard-h2-8 {
+  @apply text-2xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic leading-tight;
+}
+
+.dashboard-span-9 {
+  @apply text-indigo-600;
+}
+
+.dashboard-p-10 {
+  @apply text-gray-500 dark:text-gray-400 font-bold uppercase tracking-widest text-[10px] md:text-xs mt-1;
+}
+
+.dashboard-div-11 {
+  @apply flex items-center justify-center w-full md:w-auto;
+}
+
+.dashboard-div-12 {
+  @apply grid grid-cols-2 gap-4 w-full md:w-auto;
+}
+
+.dashboard-div-13 {
+  @apply bg-gray-50 dark:bg-slate-800/50 px-6 py-4 md:px-10 md:py-6 rounded-2xl md:rounded-3xl text-center border border-gray-100 dark:border-slate-800;
+}
+
+.dashboard-span-14 {
+  @apply block text-xl md:text-3xl font-black text-gray-900 dark:text-white;
+}
+
+.dashboard-span-15 {
+  @apply text-[8px] md:text-[10px] font-black uppercase tracking-widest text-indigo-600;
+}
+
+.dashboard-div-16 {
+  @apply bg-indigo-600 px-6 py-4 md:px-10 md:py-6 rounded-2xl md:rounded-3xl text-center shadow-xl shadow-indigo-100 dark:shadow-none;
+}
+
+.dashboard-span-17 {
+  @apply block text-xl md:text-3xl font-black text-white;
+}
+
+.dashboard-span-18 {
+  @apply text-[8px] md:text-[10px] font-black uppercase tracking-widest text-indigo-100 opacity-80;
+}
+
+.dashboard-div-19 {
+  @apply mt-8 md:mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10;
+}
+
+.dashboard-div-20 {
+  @apply lg:col-span-2 space-y-6;
+}
+
+.dashboard-div-21 {
+  @apply flex items-center space-x-3 mb-2 px-2;
+}
+
+.dashboard-fifiletext-22 {
+  @apply text-indigo-600;
+}
+
+.dashboard-h3-23 {
+  @apply text-xl md:text-2xl font-black text-gray-900 dark:text-white uppercase italic;
+}
+
+.dashboard-span-24 {
+  @apply text-indigo-600;
+}
+
+.dashboard-div-25 {
+  @apply space-y-4;
+}
+
+.dashboard-div-26 {
+  @apply p-12 md:p-20 text-center bg-gray-50/50 dark:bg-slate-900/50 rounded-[32px] md:rounded-[40px] border border-dashed border-gray-200 dark:border-slate-800;
+}
+
+.dashboard-p-27 {
+  @apply text-gray-400 font-bold uppercase tracking-widest text-xs md:text-sm;
+}
+
+.dashboard-div-28 {
+  @apply flex flex-col gap-3;
+}
+
+.dashboard-div-29 {
+  @apply bg-white dark:bg-slate-900 p-4 md:p-6 rounded-[24px] md:rounded-[32px] border border-gray-100 dark:border-slate-800 hover:shadow-2xl transition-all flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0;
+}
+
+.dashboard-div-30 {
+  @apply flex items-center space-x-4 md:space-x-5 w-full sm:w-auto;
+}
+
+.dashboard-div-31 {
+  @apply min-w-0;
+}
+
+.dashboard-h4-32 {
+  @apply font-black text-base md:text-lg text-gray-900 dark:text-white truncate max-w-[180px] md:max-w-md;
+}
+
+.dashboard-div-33 {
+  @apply flex items-center space-x-3 md:space-x-4 mt-1 text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400;
+}
+
+.dashboard-span-34 {
+  @apply flex items-center whitespace-nowrap;
+}
+
+.dashboard-fiheart-35 {
+  @apply mr-1;
+}
+
+.dashboard-div-36 {
+  @apply flex items-center w-full sm:w-auto justify-end;
+}
+
+.dashboard-div-37 {
+  @apply mx-4 md:mx-6 p-4 md:p-5 bg-red-50/50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-2xl md:rounded-[24px] flex items-start gap-3;
+}
+
+.dashboard-fialertcircle-38 {
+  @apply text-red-600 shrink-0 mt-0.5;
+}
+
+.dashboard-p-39 {
+  @apply text-[10px] font-black uppercase tracking-widest text-red-600 mb-1;
+}
+
+.dashboard-p-40 {
+  @apply text-xs md:text-sm font-medium text-red-800 dark:text-red-300 leading-relaxed italic;
+}
+
+.dashboard-div-41 {
+  @apply space-y-6 md:space-y-8;
+}
+
+.dashboard-div-42 {
+  @apply bg-indigo-600 p-6 md:p-8 rounded-[32px] md:rounded-[40px] text-white shadow-xl shadow-indigo-100 dark:shadow-none;
+}
+
+.dashboard-h4-43 {
+  @apply text-xl md:text-2xl font-black uppercase italic mb-2;
+}
+
+.dashboard-p-44 {
+  @apply text-indigo-100 font-medium text-xs md:text-sm leading-relaxed;
+}
+
+.dashboard-div-45 {
+  @apply mt-4 flex justify-end;
+}
+
+.dashboard-span-46 {
+  @apply text-3xl md:text-4xl;
+}
+
+.dashboard-div-47 {
+  @apply bg-white dark:bg-slate-900 p-6 md:p-8 rounded-[32px] md:rounded-[40px] border border-gray-100 dark:border-slate-800;
+}
+
+.dashboard-h4-48 {
+  @apply text-base md:text-lg font-black uppercase tracking-widest text-gray-900 dark:text-white mb-6 flex items-center;
+}
+
+.dashboard-ficlock-49 {
+  @apply mr-2 text-indigo-600;
+}
+
+.dashboard-div-50 {
+  @apply space-y-5 md:space-y-6;
+}
+
+.dashboard-div-51 {
+  @apply flex items-start space-x-3 border-l-2 border-indigo-100 dark:border-slate-800 pl-4;
+}
+
+.dashboard-ficheckcircle-52 {
+  @apply text-green-500 shrink-0 mt-1;
+}
+
+.dashboard-p-53 {
+  @apply text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-tight leading-relaxed;
+}
+
+.dashboard-div-54 {
+  @apply flex items-start space-x-3 border-l-2 border-indigo-100 dark:border-slate-800 pl-4;
+}
+
+.dashboard-ficheckcircle-55 {
+  @apply text-green-500 shrink-0 mt-1;
+}
+
+.dashboard-p-56 {
+  @apply text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-tight leading-relaxed;
+}

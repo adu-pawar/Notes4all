@@ -1,0 +1,195 @@
+.upload-div-1 {
+  @apply max-w-4xl mx-auto mt-4 md:mt-8 pb-20 px-4;
+}
+
+.upload-div-2 {
+  @apply bg-white dark:bg-slate-900 p-6 md:p-12 rounded-[32px] md:rounded-[40px] shadow-2xl border border-gray-100 dark:border-slate-800;
+}
+
+.upload-div-3 {
+  @apply flex flex-col md:flex-row justify-between items-start mb-10 gap-4;
+}
+
+.upload-h2-4 {
+  @apply text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight leading-none uppercase italic mb-2;
+}
+
+.upload-span-5 {
+  @apply text-indigo-600;
+}
+
+.upload-p-6 {
+  @apply text-gray-500 dark:text-gray-400 font-medium text-xs md:text-sm;
+}
+
+.upload-div-7 {
+  @apply bg-indigo-50 dark:bg-indigo-900/30 px-4 py-2 rounded-2xl border border-indigo-100 dark:border-indigo-800 shrink-0;
+}
+
+.upload-span-8 {
+  @apply text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest;
+}
+
+.upload-div-9 {
+  @apply bg-red-50 dark:bg-red-900/20 border-2 border-red-100 dark:border-red-900/30 text-red-600 dark:text-red-400 px-6 py-4 rounded-3xl mb-8 flex items-center justify-center space-x-3 shadow-lg shadow-red-100 dark:shadow-none;
+}
+
+.upload-div-10 {
+  @apply w-2 h-2 bg-red-500 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.5)];
+}
+
+.upload-span-11 {
+  @apply text-[11px] font-black uppercase tracking-widest;
+}
+
+.upload-form-12 {
+  @apply space-y-8;
+}
+
+.upload-div-13 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8;
+}
+
+.upload-div-14 {
+  @apply col-span-2;
+}
+
+.upload-label-15 {
+  @apply block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2 ml-1 italic;
+}
+
+.upload-div-16 {
+  @apply w-full px-6 py-4 bg-gray-100/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all;
+}
+
+.upload-div-17 {
+  @apply col-span-2;
+}
+
+.upload-label-18 {
+  @apply block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2 ml-1 italic;
+}
+
+.upload-div-19 {
+  @apply relative;
+}
+
+.upload-div-20 {
+  @apply w-full px-6 py-4 bg-gray-100/50 dark:bg-slate-800/50 border-none rounded-2xl focus:ring-2 focus:ring-indigo-500 text-gray-900 dark:text-white font-bold transition-all appearance-none cursor-pointer;
+}
+
+.upload-option-21 {
+  @apply text-indigo-600 font-bold tracking-widest;
+}
+
+.upload-fichevrondown-22 {
+  @apply absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none;
+}
+
+.upload-div-23 {
+  @apply col-span-2 md:col-span-1;
+}
+
+.upload-label-24 {
+  @apply block text-[10px] font-black uppercase tracking-widest text-indigo-600 mb-2 ml-1;
+}
+
+.upload-div-25 {
+  @apply relative;
+}
+
+.upload-fipluscircle-26 {
+  @apply absolute left-5 top-1/2 -translate-y-1/2 text-indigo-500;
+}
+
+.upload-div-27 {
+  @apply w-full pl-12 pr-6 py-4 bg-indigo-50/30 dark:bg-slate-800/50 border-2 border-indigo-100 dark:border-indigo-900/40 rounded-2xl font-bold dark:text-white;
+}
+
+.upload-div-28 {
+  @apply col-span-2;
+}
+
+.upload-label-29 {
+  @apply block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2 ml-1 italic;
+}
+
+.upload-div-30 {
+  @apply relative p-8 md:p-12 border-2 border-dashed border-gray-200 dark:border-slate-800 rounded-[32px] hover:border-indigo-500 bg-gray-50 dark:bg-slate-800/20 text-center cursor-pointer transition-all;
+}
+
+.upload-div-31 {
+  @apply space-y-4;
+}
+
+.upload-div-32 {
+  @apply w-16 h-16 bg-white dark:bg-slate-900 rounded-2xl flex items-center justify-center mx-auto shadow-sm;
+}
+
+.upload-fiuploadcloud-33 {
+  @apply text-3xl text-indigo-600;
+}
+
+.upload-p-34 {
+  @apply text-gray-900 dark:text-white font-black uppercase tracking-widest text-sm;
+}
+
+.upload-p-35 {
+  @apply text-gray-400 text-[10px] uppercase font-bold mt-1 tracking-widest;
+}
+
+.upload-div-36 {
+  @apply flex flex-col items-center space-y-3;
+}
+
+.upload-div-37 {
+  @apply w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg;
+}
+
+.upload-p-38 {
+  @apply text-green-600 dark:text-green-400 font-bold truncate max-w-xs;
+}
+
+.upload-div-39 {
+  @apply text-[10px] font-black uppercase text-red-500 hover:underline tracking-widest;
+}
+
+.upload-div-40 {
+  @apply absolute inset-0 w-full h-full opacity-0 cursor-pointer;
+}
+
+.upload-div-41 {
+  @apply w-full space-y-3;
+}
+
+.upload-div-42 {
+  @apply flex justify-between items-center px-1;
+}
+
+.upload-span-43 {
+  @apply text-[10px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400;
+}
+
+.upload-span-44 {
+  @apply text-[10px] font-black text-indigo-600 dark:text-indigo-400;
+}
+
+.upload-div-45 {
+  @apply w-full h-4 bg-gray-100 dark:bg-slate-800 rounded-full overflow-hidden;
+}
+
+.upload-div-46 {
+  @apply h-full rounded-full transition-all ease-out shadow-lg;
+}
+
+.upload-div-47 {
+  @apply flex items-center justify-center space-x-3;
+}
+
+.upload-div-48 {
+  @apply rounded-full h-4 w-4 border-b-2 border-gray-400;
+}
+
+.upload-span-49 {
+  @apply text-[10px];
+}
